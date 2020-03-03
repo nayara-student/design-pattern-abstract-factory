@@ -29,7 +29,7 @@ public class Representante {
 		this.empresa = empresa;
 	}
 
-	public EmpresaFornecedora escolherFornecedora(String estado, String descricao) {
+	public void escolherFornecedora(String estado, String descricao) {
 		if(estado.equals("GO") && descricao.equals("calcario")) {
 			this.empresa = new FornecedoraGoias();
 			this.pedidoCalcario = new IndustriaCalbras();
@@ -43,7 +43,6 @@ public class Representante {
 			this.empresa = new FornecedoraTocantins();
 			this.pedidoGesso = new IndustriaConsube();
 		}
-		return empresa;
 	}
 }
 
